@@ -29,13 +29,6 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () {
-              // Navigate to settings page
-            },
-          ),
-          ListTile(
             leading: Icon(Icons.info),
             title: Text('About'),
             onTap: () {

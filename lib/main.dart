@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'routes/app_routes.dart';
 import 'views/pages/home_page.dart';
+import 'views/pages/about_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -44,6 +45,13 @@ class _MyAppState extends State<MyApp> {
         if (settings.name == AppRoutes.home) {
           return MaterialPageRoute(
             builder: (context) => HomePage(
+              selectedLocale: _locale,
+              onLocaleChanged: changeLanguage,
+            ),
+          );
+        } else if (settings.name == AppRoutes.about) {
+          return MaterialPageRoute(
+            builder: (context) => AboutPage(
               selectedLocale: _locale,
               onLocaleChanged: changeLanguage,
             ),

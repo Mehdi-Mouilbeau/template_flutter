@@ -9,12 +9,17 @@ class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:
-        return MaterialPageRoute(builder: (_) => HomePage(
-          selectedLocale: Locale('fr'), 
-          onLocaleChanged: (locale) {}, 
-        ));
+        return MaterialPageRoute(
+            builder: (_) => HomePage(
+                  selectedLocale: Locale('fr'),
+                  onLocaleChanged: (locale) {},
+                ));
       case about:
-        return MaterialPageRoute(builder: (_) => AboutPage());
+        return MaterialPageRoute(
+            builder: (_) => AboutPage(
+                  selectedLocale: Locale('fr'),
+                  onLocaleChanged: (locale) {},
+                ));
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
